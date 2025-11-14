@@ -1,0 +1,13 @@
+package xonism.secretrandomizer;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SecretRandomizerApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
