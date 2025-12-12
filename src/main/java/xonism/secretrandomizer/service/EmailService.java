@@ -35,7 +35,8 @@ public class EmailService {
         try {
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage);
             mimeMessageHelper.setValidateAddresses(true);
-            mimeMessageHelper.setFrom(new InternetAddress(from, "🕵️"));
+            // outlook doesn't support emoji-only display name
+            mimeMessageHelper.setFrom(new InternetAddress(from, "🕵️ REDACTED"));
             mimeMessageHelper.setTo(email.to());
             mimeMessageHelper.setSubject(email.subject());
             mimeMessageHelper.setText(email.message(), true);
